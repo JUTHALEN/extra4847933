@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="gym_categoria_modulo" model="ir.module.category">
-        <field name="name">Actividad</field>
+        <field name="name">Gimnasio</field>
         <field name="description">Ayuda a gestionar las actividades</field>
         <field name="sequence">100</field>     
     </record>

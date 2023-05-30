@@ -139,15 +139,15 @@
 
     <!-- Definición del menú -->
     <menuitem name="extra4847933" id="menu_gym_root"/>
-    <menuitem name="Actividad" id="menu_gym_actividad" parent="menu_gym_root" groups = "extra4847933_gym_admin, extra4847933_gym_user"/>
-    <menuitem name="Profesor" id="menu_gym_profesor" parent="menu_gym_root" groups = "extra4847933_gym_admin"/>
-    <menuitem name="Alumno" id="menu_gym_alumno" parent="menu_gym_root"  groups = "extra4847933_gym_admin,extra4847933_gym_user" />
+    <menuitem name="Actividad" id="menu_gym_actividad" parent="menu_gym_root" groups = "extra4847933.gym_admin"/>
+    <menuitem name="Profesor" id="menu_gym_profesor" parent="menu_gym_root" groups = "extra4847933.gym_admin"/>
+    <menuitem name="Alumno" id="menu_gym_alumno" parent="menu_gym_root"  groups = "extra4847933.gym_admin"/>  
 
     <menuitem name="Ver actividades" id="menu_gym_actividad_tree" parent="menu_gym_actividad" 
-       action="gym_actividad_action"  groups = "extra4847933_gym_admin, extra4847933_gym_user"/>
+       action="gym_actividad_action"  groups = "extra4847933.gym_admin"/>
     <menuitem name="Ver profesores" id="menu_gym_profesor_tree" parent="menu_gym_profesor"
-        action="gym_profesor_action" groups = "extra4847933_gym_admin"/>
+        action="gym_profesor_action" groups = "extra4847933.gym_admin"/>
     <menuitem name="Ver alumnos" id="menu_gym_alumno_tree" parent="menu_gym_alumno"
-        action="gym_alumno_action"  groups = "extra4847933_gym_admin, extra4847933_gym_user"/>
+        action="gym_alumno_action"  groups = "extra4847933.gym_admin"/>
   </data>
 </odoo>
