@@ -9,7 +9,7 @@
     'author': "Judith Alende Martínez",
     'website': "ead.murciaeduca.es",
 
-    'category': 'tools',
+    'category': 'gestión gimnasio',
     'version': '1.0',
 
     # any module necessary for this one to work correctly
