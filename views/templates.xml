@@ -1,24 +1,28 @@
 <odoo>
-    <data>
-<!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
+     <record id="4847933_report_alumno" model="ir.actions.report">
+        <field name="name">Ficha del alumno</field>
+        <field name="model">gym.alumno</field>
+        <field name="report_name">4847933.report_alumno_view</field>
+        <field name="report_file">4847933.report_alumno_view</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="binding_model_id" ref="model_gym_alumno"/>
+    </record>
+    <template id="report_alumno_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="alumno">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Alumno: <span t-field="alumno.name"/></h2>
+                        <ul>
+                            <li>Nombre: <span t-field="alumno.name"/></li>
+                            <li>Apellido 1: <span t-field="alumno.apellido1"/></li>
+                            <li>Apellido 2: <span t-field="alumno.apellido2"/></li>
+                            <li>Fecha de nacimiento: <span t-field="alumno.fecha_nacimiento"/></li>
+                            <li>Grupo: <span t-field="alumno.grupo"/></li>
+                        </ul>
+                    </div>
+                </t>
             </t>
-          </dl>
-        </template>
--->
-    </data>
+        </t>
+    </template>
 </odoo>
