@@ -56,13 +56,36 @@
               <field name="fecha_alta"/>
               <field name="fecha_actividad"/>
               <field name="precio"/>
-              <field name="monitores"/>
+              <field name="monitores" attrs="{'invisible': [('monitores', '=', False)]}"/>
               <field name="trainings"/>
-              <field name="foto"/>
+              <field name="foto"  nolabel='1' widget='image' class='oe_right' options="{' preview_image':' image_medium',' size':[100,100]}" />
             </group>
             <notebook>
-              <page string='Más datos' >
+              <page string='Alumnos' >
                 <field name ="ids_alumnos"/>                
+              </page>              
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vista de formulario para gym.profesor -->
+    <record model="ir.ui.view" id="gym_profesor_form">
+      <field name="name">Alta de Nuevo Profesor</field>
+      <field name="model">gym.profesor</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="foto"  nolabel='1' widget='image' class='oe_right' options="{' preview_image':' image_medium',' size':[100,100]}" />
+              <field name="name"/>
+              <field name="apellido1"/>
+              <field name="apellido2"/>
+            </group>
+            <notebook>
+              <page string='Actividades' >
+                <field name ="ids_actividades"/>                
               </page>              
             </notebook>
           </sheet>
