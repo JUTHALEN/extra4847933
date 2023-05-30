@@ -14,11 +14,11 @@
                     <div class="page">
                         <h2>Alumno: <span t-field="alumno.name"/></h2>
                         <ul>
-                            <li>Nombre: <span t-field="alumno.name"/></li>
-                            <li>Apellido 1: <span t-field="alumno.apellido1"/></li>
-                            <li>Apellido 2: <span t-field="alumno.apellido2"/></li>
-                            <li>Fecha de nacimiento: <span t-field="alumno.fecha_nacimiento"/></li>
-                            <li>Grupo: <span t-field="alumno.grupo"/></li>
+                            <li><strong>Nombre:</strong> <span t-field="alumno.name"/></li>
+                            <li><strong>Apellido 1:</strong> <span t-field="alumno.apellido1"/></li>
+                            <li><strong>Apellido 2:</strong> <span t-field="alumno.apellido2"/></li>
+                            <li><strong>Fecha de nacimiento:</strong> <span t-field="alumno.fecha_nacimiento"/></li>
+                            <li><strong>Grupo:</strong> <span t-field="alumno.grupo"/></li>
                         </ul>
                     </div>
                 </t>
