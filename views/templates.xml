@@ -2,8 +2,8 @@
      <record id="extra4847933_report_alumno" model="ir.actions.report">
         <field name="name">Ficha del alumno</field>
         <field name="model">gym.alumno</field>
-        <field name="report_name">4847933.report_alumno_view</field>
-        <field name="report_file">4847933.report_alumno_view</field>
+        <field name="report_name">extra4847933.report_alumno_view</field>
+        <field name="report_file">extra4847933.report_alumno_view</field>
         <field name="report_type">qweb-pdf</field>
         <field name="binding_model_id" ref="model_gym_alumno"/>
     </record>
