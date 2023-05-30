@@ -32,7 +32,7 @@ class ModuloActividad(models.Model):
     @api.depends('precio')
     def _compute_monitores(self):
         for record in self:
-            if record.precio == 'Gold':
+            if record.precio == '4':
                 record.monitores = True
             else:
                 record.monitores = False
