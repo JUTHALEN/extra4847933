@@ -15,14 +15,13 @@
 
     <!-- actions opening views on models RES_MODEL DEBE SER IGUAL AL _NAME DEL MODULO-->
     <record model="ir.actions.act_window" id="modulo_actividad_action_window">
-      <field name="name">Accion de ventana para gym.actividad</field>
+      <field name="name">Actividad</field>
       <field name="res_model">gym.actividad</field>
       <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Top menu item AQUI DEFINIMOS COMO QUEREMOS QUE APAREZCA NUESTRO MENÚ -->
-
-    <menuitem name="extra4847933" id="modulo_extra4847933_menu_root"/>
+    <menuitem name="Extra4847933" id="modulo_extra4847933_menu_root"/>
 
     <!-- menu categories AQUI ESTO DEBE SER IGUAL:  id == parent-->
     <menuitem name="Actividad" id="modulo_actividad_menu_1" parent="modulo_extra4847933_menu_root"/>
