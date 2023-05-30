@@ -1,5 +1,5 @@
 <odoo>
-     <record id="4847933_report_alumno" model="ir.actions.report">
+     <record id="extra4847933_report_alumno" model="ir.actions.report">
         <field name="name">Ficha del alumno</field>
         <field name="model">gym.alumno</field>
         <field name="report_name">4847933.report_alumno_view</field>
