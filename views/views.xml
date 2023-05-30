@@ -1,17 +1,75 @@
 <odoo>
   <data>
-    <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="modulo_actividad_tree">
-      <field name="name">Actividad</field>
+   <!-- Vista de árbol para gym.actividad -->
+    <record model="ir.ui.view" id="gym_actividad_tree_view">
+      <field name="name">gym.actividad.tree</field>
       <field name="model">gym.actividad</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
           <field name="fecha_alta"/>
+          <field name="fecha_actividad"/>
+          <field name="precio"/>
+          <field name="monitores"/>
         </tree>
       </field>
     </record>
 
+    <!-- Vista de árbol para gym.profesor -->
+    <record model="ir.ui.view" id="gym_profesor_tree_view">
+      <field name="name">gym.profesor.tree</field>
+      <field name="model">gym.profesor</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="apellido1"/>
+          <field name="apellido2"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista de árbol para gym.alumno -->
+    <record model="ir.ui.view" id="gym_alumno_tree_view">
+      <field name="name">gym.alumno.tree</field>
+      <field name="model">gym.alumno</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nre"/>
+          <field name="name"/>
+          <field name="apellido1"/>
+          <field name="apellido2"/>
+          <field name="fecha_nacimiento"/>
+          <field name="grupo"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Definición del menú -->
+    <menuitem name="Gym" id="menu_gym_root"/>
+    <menuitem name="Actividad" id="menu_gym_actividad" parent="menu_gym_root" action="gym_actividad_action_window"/>
+    <menuitem name="Profesor" id="menu_gym_profesor" parent="menu_gym_root" action="gym_profesor_action_window"/>
+    <menuitem name="Alumno" id="menu_gym_alumno" parent="menu_gym_root" action="gym_alumno_action_window"/>
+
+    <!-- Acciones -->
+    <record model="ir.actions.act_window" id="gym_actividad_action_window">
+      <field name="name">Actividad</field>
+      <field name="res_model">gym.actividad</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gym_profesor_action_window">
+      <field name="name">Profesor</field>
+      <field name="res_model">gym.profesor</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="gym_alumno_action_window">
+      <field name="name">Alumno</field>
+      <field name="res_model">gym.alumno</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+<!-- 
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="modulo_actividad_action_window">
       <field name="name">Actividad</field>
@@ -28,6 +86,6 @@
     
     <!-- actions -->
     <menuitem name="Ver actividades" id="modulo2_actividad_menu_1_list" parent="modulo_actividad_menu_1"
-              action="modulo_actividad_action_window"/>
+              action="modulo_actividad_action_window"/> -->
   </data>
 </odoo>
