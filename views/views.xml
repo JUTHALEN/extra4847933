@@ -92,7 +92,33 @@
         </form>
       </field>
     </record>
-    
+
+    <!-- Vista de formulario para gym.alumno -->
+    <record model="ir.ui.view" id="gym_alumno_form">
+      <field name="name">Alta de Nuevo Alumno</field>
+      <field name="model">gym.alumno</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="nre"/>
+              <field name="name"/>
+              <field name="apellido1"/>
+              <field name="apellido2"/>
+              <field name="fecha_nacimiento"/>
+              <field name="grupo"/>
+              <field name="foto"  nolabel='1' widget='image' class='oe_right' options="{' preview_image':' image_medium',' size':[100,100]}" />
+            </group>
+            <notebook>
+              <page string='Actividades' >
+                <field name ="ids_actividades"/>                
+              </page>              
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+        
     <!-- Acciones -->
     <record model="ir.actions.act_window" id="gym_actividad_action">
       <field name="name">Actividad</field>
