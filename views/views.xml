@@ -43,7 +43,7 @@
         </tree>
       </field>
     </record>
-
+    
     <!-- Definición del menú -->
     <menuitem name="Gym" id="menu_gym_root"/>
     <menuitem name="Actividad" id="menu_gym_actividad" parent="menu_gym_root" action="gym_actividad_action_window"/>
