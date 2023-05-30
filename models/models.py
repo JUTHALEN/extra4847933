@@ -5,9 +5,9 @@ from odoo.exceptions import ValidationError
 import re
 
 
-class modulo_actividad(models.Model):
+class actividad(models.Model):
     _name = 'gym.actividad'
-    _description = 'gym.actividad'
+    _description = 'actividad'
 
     name = fields.Char(string="Nombre", required=True)
     fecha_alta = fields.Date(
@@ -51,9 +51,9 @@ class modulo_actividad(models.Model):
                 record.trainings = 10
             else:
                 record.trainings = 15
-class modulo_profesor(models.Model):
+class profesor(models.Model):
     _name='gym.profesor'
-    _description='gym.profesor'
+    _description='profesor'
 
     name = fields.Char(string="Nombre", required=True)
     apellido1 = fields.Char(string="Primer apellido", required=True)
@@ -67,9 +67,9 @@ class modulo_profesor(models.Model):
         ondelete = 'set null'
     )
 
-class modulo_alumno(models.Model):
+class alumno(models.Model):
     _name='gym.alumno'
-    _description='gym.alumno'
+    _description='alumno'
 
     nre = fields.Char(string="NRE", required=True)
     name = fields.Char(string="Nombre", required=True)
