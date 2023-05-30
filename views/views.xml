@@ -139,9 +139,9 @@
 
     <!-- Definición del menú -->
     <menuitem name="extra4847933" id="menu_gym_root"/>
-    <menuitem name="Actividad" id="menu_gym_actividad" parent="menu_gym_root" groups = "extra4847933.gym_admin, extra4847933.gym_user"/>
+    <menuitem name="Actividad" id="menu_gym_actividad" parent="menu_gym_root" groups = "extra4847933.gym_admin"/>
     <menuitem name="Profesor" id="menu_gym_profesor" parent="menu_gym_root" groups = "extra4847933.gym_admin"/>
-    <menuitem name="Alumno" id="menu_gym_alumno" parent="menu_gym_root"  groups = "extra4847933.gym_admin"/>  
+    <menuitem name="Alumno" id="menu_gym_alumno" parent="menu_gym_root"  groups = "extra4847933.gym_admin, extra4847933.gym_user"/>  
 
     <menuitem name="Ver actividades" id="menu_gym_actividad_tree" parent="menu_gym_actividad" 
        action="gym_actividad_action"  groups = "extra4847933.gym_admin"/>
