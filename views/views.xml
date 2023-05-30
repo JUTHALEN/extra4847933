@@ -107,7 +107,6 @@
               <field name="apellido2"/>
               <field name="fecha_nacimiento"/>
               <field name="grupo"/>
-              <field name="foto"  nolabel='1' widget='image' class='oe_right' options="{' preview_image':' image_medium',' size':[100,100]}" />
             </group>
             <notebook>
               <page string='Actividades' >
