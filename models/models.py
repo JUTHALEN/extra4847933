@@ -88,3 +88,10 @@ class ModuloAlumno(models.Model):
         string="Actividades",
         ondelete='cascade'
     )
+
+    #restricciones a nre
+    @api.constrains('nre')
+    def _check_nre(self):
+        for record in self:
+            if not re.match(r'[0-9]{7}', record.nre):
+                raise ValidationError("El NRE debe tener 7 números")
