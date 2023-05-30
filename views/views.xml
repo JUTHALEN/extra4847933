@@ -1,7 +1,6 @@
 <odoo>
   <data>
-    <!-- explicit list view definition MODEL DEBE SER IGUAL AL _NAME DEL MODULO-->
-
+    <!-- explicit list view definition -->
     <record model="ir.ui.view" id="modulo_actividad_tree">
       <field name="name">Actividad</field>
       <field name="model">gym.actividad</field>
@@ -13,22 +12,22 @@
       </field>
     </record>
 
-    <!-- actions opening views on models RES_MODEL DEBE SER IGUAL AL _NAME DEL MODULO-->
+    <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="modulo_actividad_action_window">
       <field name="name">Actividad</field>
       <field name="res_model">gym.actividad</field>
       <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Top menu item AQUI DEFINIMOS COMO QUEREMOS QUE APAREZCA NUESTRO MENÚ -->
-    <menuitem name="Extra4847933" id="modulo_extra4847933_menu_root"/>
+    <!-- Top menu item -->
+    <menuitem name="Extra4847933" id="modulo_extra4847933_menu_root" sequence="1"/>
 
-    <!-- menu categories AQUI ESTO DEBE SER IGUAL:  id == parent-->
-    <menuitem name="Actividad" id="modulo_actividad_menu_1" parent="modulo_extra4847933_menu_root"/>
+    <!-- menu categories -->
+    <menuitem name="Actividad" id="modulo_actividad_menu_1" parent="modulo_extra4847933_menu_root" sequence="10"/>
 
     <!-- actions -->
     <menuitem name="Ver actividades" id="modulo_actividad_menu_1_list" parent="modulo_actividad_menu_1"
-              action="modulo_actividad_action_window"/>
+              action="modulo_actividad_action_window" sequence="10"/>
               
   </data>
 </odoo>
