@@ -1,6 +1,6 @@
 <odoo>
   <data>
-   <!-- Vista de árbol para gym.actividad -->
+    <!-- Vista de árbol para gym.actividad -->
     <record model="ir.ui.view" id="gym_actividad_tree_view">
       <field name="name">gym.actividad.tree</field>
       <field name="model">gym.actividad</field>
@@ -43,27 +43,27 @@
         </tree>
       </field>
     </record>
-    
+
     <!-- Definición del menú -->
     <menuitem name="Gym" id="menu_gym_root"/>
-    <menuitem name="Actividad" id="menu_gym_actividad" parent="menu_gym_root" action="gym_actividad_action_window"/>
-    <menuitem name="Profesor" id="menu_gym_profesor" parent="menu_gym_root" action="gym_profesor_action_window"/>
-    <menuitem name="Alumno" id="menu_gym_alumno" parent="menu_gym_root" action="gym_alumno_action_window"/>
+    <menuitem name="Actividad" id="menu_gym_actividad" parent="menu_gym_root" action="gym_actividad_action"/>
+    <menuitem name="Profesor" id="menu_gym_profesor" parent="menu_gym_root" action="gym_profesor_action"/>
+    <menuitem name="Alumno" id="menu_gym_alumno" parent="menu_gym_root" action="gym_alumno_action"/>
 
     <!-- Acciones -->
-    <record model="ir.actions.act_window" id="gym_actividad_action_window">
+    <record model="ir.actions.act_window" id="gym_actividad_action">
       <field name="name">Actividad</field>
       <field name="res_model">gym.actividad</field>
       <field name="view_mode">tree,form</field>
     </record>
 
-    <record model="ir.actions.act_window" id="gym_profesor_action_window">
+    <record model="ir.actions.act_window" id="gym_profesor_action">
       <field name="name">Profesor</field>
       <field name="res_model">gym.profesor</field>
       <field name="view_mode">tree,form</field>
     </record>
 
-    <record model="ir.actions.act_window" id="gym_alumno_action_window">
+    <record model="ir.actions.act_window" id="gym_alumno_action">
       <field name="name">Alumno</field>
       <field name="res_model">gym.alumno</field>
       <field name="view_mode">tree,form</field>
