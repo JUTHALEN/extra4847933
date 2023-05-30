@@ -15,8 +15,8 @@
 
     <!-- actions opening views on models RES_MODEL DEBE SER IGUAL AL _NAME DEL MODULO-->
     <record model="ir.actions.act_window" id="modulo_actividad_action_window">
-      <field name="name">Accion de ventana para modulo1.modulo</field>
-      <field name="res_model">modulo1.modulo</field>
+      <field name="name">Accion de ventana para gym.actividad</field>
+      <field name="res_model">gym.actividad</field>
       <field name="view_mode">tree,form</field>
     </record>
 
