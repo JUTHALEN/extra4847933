@@ -20,14 +20,11 @@
     </record>
 
     <!-- Top menu item -->
-    <menuitem name="Extra4847933" id="modulo_extra4847933_menu_root"/>
-
-    <!-- menu categories -->
-    <menuitem name="Actividad" id="modulo_actividad_menu_1" parent="modulo_extra4847933_menu_root"/>
-
-    <!-- actions -->
-    <menuitem name="Ver actividades" id="modulo_actividad_menu_1_list" parent="modulo_actividad_menu_1"
-              action="modulo_actividad_action_window"/>
-              
+    <menuitem id='gym_actividad_menu' name='Extra4847933'/>
+    
+    <menuitem id='gym_actividad_menu' name='Actividad' parent='gym_actividad_menu'/>
+    <menuitem id='act_action_menu' name='Ver actividades' parent='gym_actividad_menu'
+      action='modulo_actividad_action_window'/>
+                    
   </data>
 </odoo>
