@@ -44,6 +44,31 @@
       </field>
     </record>
 
+    <!-- Vista de formulario para gym.actividad -->
+    <record model="ir.ui.view" id="gym_actividad_form">
+      <field name="name">Alta de Nueva Actividad</field>
+      <field name="model">gym.actividad</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="fecha_alta"/>
+              <field name="fecha_actividad"/>
+              <field name="precio"/>
+              <field name="monitores"/>
+              <field name="trainings"/>
+              <field name="foto"/>
+            </group>
+            <notebook>
+              <page string='Más datos' >
+                <field name ="ids_alumnos"/>                
+              </page>              
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
     
     <!-- Acciones -->
     <record model="ir.actions.act_window" id="gym_actividad_action">
