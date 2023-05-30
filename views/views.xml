@@ -5,7 +5,7 @@
       <field name="name">gym actividad</field>
       <field name="model">gym.actividad</field>
       <field name="arch" type="xml">
-        <tree decoration-success = "precio == '1'">
+        <tree decoration-success = "precio == '1'" decoration-warning = "precio != '1'">
           <field name="name"/>
           <field name="fecha_alta"/>
           <field name="fecha_actividad"/>
